@@ -1,0 +1,5 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/Metal.jpg","E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/bin/Windows/Metal.xnb","TextureProcessor","Texture2DContent",292056,2560085,0.2401183
+"E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/Smiley2.jpg","E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/bin/Windows/Smiley2.xnb","TextureProcessor","Texture2DContent",10680,65621,0.0088622
+"E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/Teapot.fbx","E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/bin/Windows/Teapot.xnb","ModelProcessor","ModelContent",96944,97691,0.1471882
+"E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/TeapotShader.fx","E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/bin/Windows/TeapotShader.xnb","EffectProcessor","CompiledEffectContent",1610,1775,0.3071236
