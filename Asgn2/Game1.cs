@@ -13,6 +13,7 @@ namespace Asgn2
         private Form1 _form1;
 
         Teapot teapot;
+        LitTeapot litTeapot;
 
         public Matrix viewMat;
         public Matrix projectionMat;
@@ -38,6 +39,7 @@ namespace Asgn2
                 100f);  //Default Projection Matrix
 
             teapot = new Teapot(this);
+            litTeapot = new LitTeapot(this);
 
             base.Initialize();
         }
@@ -49,6 +51,7 @@ namespace Asgn2
             _form1 = new Form1();
 
             teapot.LoadContent();
+            litTeapot.LoadContent();
 
             // TODO: use this.Content to load your game content here
         }
@@ -59,7 +62,15 @@ namespace Asgn2
                 Exit();
 
             // TODO: Add your update logic here
-            teapot.Update();
+            if(_form1.option == 1)
+            {
+                teapot.Update();
+            }
+            else if(_form1.option == 2)
+            {
+                litTeapot.Update();
+            }
+
 
             base.Update(gameTime);
         }
@@ -70,7 +81,14 @@ namespace Asgn2
 
             _form1.Show();
 
-            teapot.Draw();
+            if (_form1.option == 1)
+            {
+                teapot.Draw();
+            }
+            else if (_form1.option == 2)
+            {
+                litTeapot.Draw();
+            }
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);

@@ -41,3 +41,4 @@ E:\_SHERIDAN_\ComputerGraphics\CGI_A2\Asgn2\Asgn2\bin\Debug\net6.0-windows\Conte
 E:\_SHERIDAN_\ComputerGraphics\CGI_A2\Asgn2\Asgn2\bin\Debug\net6.0-windows\Content\TeapotShader.xnb
 E:\_SHERIDAN_\ComputerGraphics\CGI_A2\Asgn2\Asgn2\bin\Debug\net6.0-windows\Content\Metal.xnb
 E:\_SHERIDAN_\ComputerGraphics\CGI_A2\Asgn2\Asgn2\bin\Debug\net6.0-windows\Content\Smiley2.xnb
+E:\_SHERIDAN_\ComputerGraphics\CGI_A2\Asgn2\Asgn2\bin\Debug\net6.0-windows\Content\LitTeapotShader.xnb
