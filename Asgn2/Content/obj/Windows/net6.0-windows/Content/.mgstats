@@ -1,6 +1,9 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/LitTeapotShader.fx","E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/bin/Windows/Content/LitTeapotShader.xnb","EffectProcessor","CompiledEffectContent",1120,1563,0.3852155
-"E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/Metal.jpg","E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/bin/Windows/Content/Metal.xnb","TextureProcessor","Texture2DContent",292056,2560085,0.2194391
-"E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/Smiley2.jpg","E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/bin/Windows/Content/Smiley2.xnb","TextureProcessor","Texture2DContent",10680,65621,0.0064643
-"E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/Teapot.fbx","E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/bin/Windows/Content/Teapot.xnb","ModelProcessor","ModelContent",96944,97691,0.2269296
-"E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/TeapotShader.fx","E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/bin/Windows/Content/TeapotShader.xnb","EffectProcessor","CompiledEffectContent",1610,1775,0.2869417
+"D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/Ariel12.spritefont","D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/bin/Windows/Content/Ariel12.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21535,0.2883177
+"D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/Box.fbx","D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/bin/Windows/Content/Box.xnb","ModelProcessor","ModelContent",15168,1495,0.2460468
+"D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/LitTeapotShader.fx","D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/bin/Windows/Content/LitTeapotShader.xnb","EffectProcessor","CompiledEffectContent",1120,1563,0.4169226
+"D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/Metal.jpg","D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/bin/Windows/Content/Metal.xnb","TextureProcessor","Texture2DContent",292056,2560085,0.1510444
+"D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/Smiley2.jpg","D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/bin/Windows/Content/Smiley2.xnb","TextureProcessor","Texture2DContent",10680,65621,0.0111125
+"D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/Sphere.fbx","D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/bin/Windows/Content/Sphere.xnb","ModelProcessor","ModelContent",16784,4229,0.0059562
+"D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/Teapot.fbx","D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/bin/Windows/Content/Teapot.xnb","ModelProcessor","ModelContent",96944,97691,0.0273569
+"D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/TeapotShader.fx","D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/bin/Windows/Content/TeapotShader.xnb","EffectProcessor","CompiledEffectContent",1610,1775,0.394807

@@ -34,6 +34,8 @@ namespace Asgn2.Content
             Matrix mWorld = Matrix.CreateTranslation(objectPos);
             Matrix wvp = mWorld * _game1.viewMat * _game1.projectionMat;
 
+            _game1._ui.DrawText($"Teapot At: {objectPos}", Color.White);
+
             _effect.Parameters["WorldViewProjection"].SetValue(wvp);
             _effect.Parameters["Tex"].SetValue(_texture);
 

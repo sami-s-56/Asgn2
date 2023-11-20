@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/TeapotShader.fx</SourceFile>
-  <SourceTime>2023-11-19T17:52:22.1383134-05:00</SourceTime>
-  <DestFile>E:/_SHERIDAN_/ComputerGraphics/CGI_A2/Asgn2/Asgn2/Content/bin/Windows/TeapotShader.xnb</DestFile>
-  <DestTime>2023-11-19T22:29:38.6208847-05:00</DestTime>
+  <SourceFile>D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/TeapotShader.fx</SourceFile>
+  <SourceTime>2023-11-20T09:41:29.9891257-05:00</SourceTime>
+  <DestFile>D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/bin/Windows/TeapotShader.xnb</DestFile>
+  <DestTime>2023-11-20T14:22:37.4258591-05:00</DestTime>
   <Importer>EffectImporter</Importer>
   <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
   <Processor>EffectProcessor</Processor>

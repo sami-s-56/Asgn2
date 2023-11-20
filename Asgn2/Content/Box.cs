@@ -4,7 +4,7 @@ using System;
 
 namespace Asgn2.Content
 {
-    internal class Box : Object, IDisposable
+    public class Box : Object, IDisposable
     {
         Object target;
 
@@ -16,7 +16,8 @@ namespace Asgn2.Content
         public override void LoadContent()
         {
             _model = _game1.Content.Load<Model>("Box");
-            _effect = _game1.Content.Load<Effect>("LightShader");
+            _effect = _game1.Content.Load<Effect>("LitTeapotShader");
+            //_effect = _game1.Content.Load<Effect>("LightShader");
             _texture = _game1.Content.Load<Texture2D>("Smiley2");
 
             objectPos = GetRandomVector();
@@ -25,13 +26,13 @@ namespace Asgn2.Content
 
         public override void Update()
         {
-            Vector3 direction = objectPos - target.objectPos;
+            Vector3 direction = target.objectPos - objectPos;
             direction.Normalize();
 
             objectPos += (direction * _game1.DeltaTime);
 
-            if(Vector3.DistanceSquared(direction, target.objectPos) <= 1f)
-                Dispos
+            if (Vector3.Distance(objectPos, target.objectPos) <= 1f)
+                Dispose();
         }
 
         public override void Draw()
@@ -73,9 +74,9 @@ namespace Asgn2.Content
             return new Vector3(randomX, randomY, randomZ);
         }
 
-        private void Dispose()
+        public void Dispose()
         {
-            
+            _game1.objects.Remove(this);
         }
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/Teapot.fbx</SourceFile>
-  <SourceTime>2023-11-20T09:41:29.9851432-05:00</SourceTime>
-  <DestFile>D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/bin/Windows/Teapot.xnb</DestFile>
-  <DestTime>2023-11-20T14:22:37.0216386-05:00</DestTime>
+  <SourceFile>D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/Box.fbx</SourceFile>
+  <SourceTime>2023-10-16T15:35:01.4939385-04:00</SourceTime>
+  <DestFile>D:/ComputerGraphicsAnimations/Asgn2/Asgn2/Content/bin/Windows/Box.xnb</DestFile>
+  <DestTime>2023-11-20T14:22:36.3286593-05:00</DestTime>
   <Importer>FbxImporter</Importer>
   <ImporterTime>2022-07-26T07:44:56-04:00</ImporterTime>
   <Processor>ModelProcessor</Processor>
@@ -42,7 +42,7 @@
   </Parameters>
   <Parameters>
     <Key>RotationX</Key>
-    <Value>-90</Value>
+    <Value>0</Value>
   </Parameters>
   <Parameters>
     <Key>RotationY</Key>

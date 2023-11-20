@@ -13,6 +13,7 @@ namespace Asgn2
 
         private Form1 _form1;
 
+        public UI _ui;
         Teapot teapot;
         LitTeapot litTeapot;
         Sphere sphere;
@@ -22,6 +23,8 @@ namespace Asgn2
         public Matrix viewMat;
         public Matrix projectionMat;
         public float DeltaTime;
+
+        bool bPauseUpdate = false;
 
         public Game1()
         {
@@ -48,6 +51,13 @@ namespace Asgn2
             sphere = new Sphere(this);
             objects.Add(sphere);
 
+            for(int i = 0; i < 4; i++) 
+            {
+                Box b = new Box(this, sphere);
+                b.LoadContent();
+                objects.Add(b);
+            }
+
             base.Initialize();
         }
 
@@ -55,6 +65,8 @@ namespace Asgn2
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            _ui = new UI(_spriteBatch, Content);
+            
             _form1 = new Form1();
 
             teapot.LoadContent();
@@ -72,7 +84,7 @@ namespace Asgn2
             DeltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             // TODO: Add your update logic here
-            if(_form1.option == 1)
+            if(_form1.option == 33)
             {
                 teapot.Update();
             }
@@ -80,11 +92,11 @@ namespace Asgn2
             {
                 litTeapot.Update();
             }
-            else if (_form1.option == 3)
+            else if (_form1.option == 1)
             {
-                foreach (Object o in objects)
+                for(int i = 0; i < objects.Count; i++) 
                 {
-                    o.Update();
+                    objects[i].Update();
                 }
 
                 //Handle new Instantiations
@@ -101,7 +113,7 @@ namespace Asgn2
 
             _form1.Show();
 
-            if (_form1.option == 1)
+            if (_form1.option == 3)
             {
                 teapot.Draw();
             }
@@ -109,11 +121,11 @@ namespace Asgn2
             {
                 litTeapot.Draw();
             }
-            else if (_form1.option == 3)
+            else if (_form1.option == 1)
             {
-                foreach (Object o in objects)
+                for (int i = 0; i < objects.Count; i++)
                 {
-                    o.Draw();
+                    objects[i].Draw();
                 }
             }
             // TODO: Add your drawing code here
