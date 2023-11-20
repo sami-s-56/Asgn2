@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace Asgn2
 {
@@ -14,9 +15,13 @@ namespace Asgn2
 
         Teapot teapot;
         LitTeapot litTeapot;
+        Sphere sphere;
+
+        public List<Object> objects = new List<Object>();
 
         public Matrix viewMat;
         public Matrix projectionMat;
+        public float DeltaTime;
 
         public Game1()
         {
@@ -40,6 +45,8 @@ namespace Asgn2
 
             teapot = new Teapot(this);
             litTeapot = new LitTeapot(this);
+            sphere = new Sphere(this);
+            objects.Add(sphere);
 
             base.Initialize();
         }
@@ -52,6 +59,7 @@ namespace Asgn2
 
             teapot.LoadContent();
             litTeapot.LoadContent();
+            sphere.LoadContent();
 
             // TODO: use this.Content to load your game content here
         }
@@ -61,6 +69,8 @@ namespace Asgn2
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            DeltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
             // TODO: Add your update logic here
             if(_form1.option == 1)
             {
@@ -69,6 +79,16 @@ namespace Asgn2
             else if(_form1.option == 2)
             {
                 litTeapot.Update();
+            }
+            else if (_form1.option == 3)
+            {
+                foreach (Object o in objects)
+                {
+                    o.Update();
+                }
+
+                //Handle new Instantiations
+
             }
 
 
@@ -88,6 +108,13 @@ namespace Asgn2
             else if (_form1.option == 2)
             {
                 litTeapot.Draw();
+            }
+            else if (_form1.option == 3)
+            {
+                foreach (Object o in objects)
+                {
+                    o.Draw();
+                }
             }
             // TODO: Add your drawing code here
 
