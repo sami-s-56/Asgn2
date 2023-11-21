@@ -84,7 +84,7 @@ namespace Asgn2
             DeltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             // TODO: Add your update logic here
-            if(_form1.option == 33)
+            if(_form1.option == 1)
             {
                 teapot.Update();
             }
@@ -92,7 +92,7 @@ namespace Asgn2
             {
                 litTeapot.Update();
             }
-            else if (_form1.option == 1)
+            else if (_form1.option == 3)
             {
                 for(int i = 0; i < objects.Count; i++) 
                 {
@@ -103,7 +103,6 @@ namespace Asgn2
 
             }
 
-
             base.Update(gameTime);
         }
 
@@ -113,7 +112,7 @@ namespace Asgn2
 
             _form1.Show();
 
-            if (_form1.option == 3)
+            if (_form1.option == 1)
             {
                 teapot.Draw();
             }
@@ -121,7 +120,7 @@ namespace Asgn2
             {
                 litTeapot.Draw();
             }
-            else if (_form1.option == 1)
+            else if (_form1.option == 3)
             {
                 for (int i = 0; i < objects.Count; i++)
                 {

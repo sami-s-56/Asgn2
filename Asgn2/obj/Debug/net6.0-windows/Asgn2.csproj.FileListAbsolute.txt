@@ -89,3 +89,6 @@ D:\ComputerGraphicsAnimations\Asgn2\Asgn2\obj\Debug\net6.0-windows\Asgn2.csproj.
 D:\ComputerGraphicsAnimations\Asgn2\Asgn2\obj\Debug\net6.0-windows\Asgn2.genruntimeconfig.cache
 D:\ComputerGraphicsAnimations\Asgn2\Asgn2\obj\Debug\net6.0-windows\ref\Asgn2.dll
 D:\ComputerGraphicsAnimations\Asgn2\Asgn2\bin\Debug\net6.0-windows\Content\Ariel12.xnb
+E:\_SHERIDAN_\ComputerGraphics\CGI_A2\Asgn2\Asgn2\bin\Debug\net6.0-windows\Content\Ariel12.xnb
+E:\_SHERIDAN_\ComputerGraphics\CGI_A2\Asgn2\Asgn2\bin\Debug\net6.0-windows\Content\Box.xnb
+E:\_SHERIDAN_\ComputerGraphics\CGI_A2\Asgn2\Asgn2\bin\Debug\net6.0-windows\Content\Sphere.xnb
