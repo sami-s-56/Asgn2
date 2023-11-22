@@ -10,6 +10,9 @@ namespace Asgn2.Content
 {
     internal class LitTeapot : Object
     {
+
+        
+
         public LitTeapot(Game1 game1) : base(game1)
         {
         }

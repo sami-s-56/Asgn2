@@ -23,6 +23,9 @@ namespace Asgn2
         public Matrix viewMat;
         public Matrix projectionMat;
         public float DeltaTime;
+        
+        public Vector3 camPos = new Vector3(0,0,4);
+        public Matrix mWorld = Matrix.Identity;
 
         bool bPauseUpdate = false;
 
