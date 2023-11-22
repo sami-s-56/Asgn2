@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,11 @@ namespace Asgn2.Content
 {
     internal class Teapot : Object
     {
+        MouseState pms;
+
         public Teapot(Game1 game1) : base(game1)
         {
+            pms = Mouse.GetState();
         }
 
         public override void LoadContent() 
@@ -26,7 +30,17 @@ namespace Asgn2.Content
 
         public override void Update()
         {
-            //Handle the rotation stuff here
+            //Handle the movement stuff here
+            
+            MouseState ms = Mouse.GetState();
+            int MouseX = ms.X;
+            int MouseY = ms.Y;
+
+            //Vector3 movVec = new Vector3(pms.X - ms.X, pms.Y - ms.Y, 0);
+            Vector3 movVec = new Vector3( ms.X - pms.X, ms.Y - pms.Y, 0);
+            //objectPos += movVec;
+            
+            pms = ms;
         }
 
         public override void Draw()
@@ -34,7 +48,6 @@ namespace Asgn2.Content
             Matrix mWorld = Matrix.CreateTranslation(objectPos);
             Matrix wvp = mWorld * _game1.viewMat * _game1.projectionMat;
 
-            _game1._ui.DrawText($"Teapot At: {objectPos}", Color.White);
 
             _effect.Parameters["WorldViewProjection"].SetValue(wvp);
             _effect.Parameters["Tex"].SetValue(_texture);
@@ -49,6 +62,8 @@ namespace Asgn2.Content
                 // Draw the mesh
                 mesh.Draw();
             }
+            
+            //_game1._ui.DrawText($"Teapot At: {objectPos}", Color.White);
         }
     }
 }
