@@ -11,11 +11,12 @@ namespace Asgn2.Content
 {
     internal class Teapot : Object
     {
-        MouseState pms;
+        Vector3 initMousePos;
+        Vector2 viewPortCenter;
 
         public Teapot(Game1 game1) : base(game1)
         {
-            pms = Mouse.GetState();
+            
         }
 
         public override void LoadContent() 
@@ -25,22 +26,34 @@ namespace Asgn2.Content
             _texture = _game1.Content.Load<Texture2D>("Smiley2");
 
             objectPos = new Vector3(0, 0, 0);
+            viewPortCenter = new Vector2(_game1.GraphicsDevice.Viewport.Width / 2, _game1.GraphicsDevice.Viewport.Height / 2);
+
+
+            MouseState currentMouseState = Mouse.GetState();
+            initMousePos = new Vector3(currentMouseState.X, currentMouseState.Y, currentMouseState.ScrollWheelValue);
+
+            Mouse.SetPosition((int)viewPortCenter.X, (int)viewPortCenter.Y);
 
         }
 
         public override void Update()
         {
-            //Handle the movement stuff here
-            
-            MouseState ms = Mouse.GetState();
-            int MouseX = ms.X;
-            int MouseY = ms.Y;
+            // Get the current state of the mouse
+            MouseState currentMouseState = Mouse.GetState();
 
-            //Vector3 movVec = new Vector3(pms.X - ms.X, pms.Y - ms.Y, 0);
-            Vector3 movVec = new Vector3( ms.X - pms.X, ms.Y - pms.Y, 0);
-            //objectPos += movVec;
+            // Calculate the change in mouse position
+            float deltaX = (initMousePos.X + currentMouseState.X);
+            float deltaY = -(initMousePos.Y + currentMouseState.Y);
+            float deltaZ = -(initMousePos.Z + currentMouseState.ScrollWheelValue * .05f);
+
+            // Update the object's position based on the change in mouse position
+            Vector3 deltaVec = Vector3.Zero;  
             
-            pms = ms;
+            deltaVec += new Vector3(deltaX, deltaY, deltaZ);
+
+            objectPos = (deltaVec - new Vector3(viewPortCenter.X, -viewPortCenter.Y, 0)) * .05f;
+
+
         }
 
         public override void Draw()
@@ -63,7 +76,7 @@ namespace Asgn2.Content
                 mesh.Draw();
             }
             
-            //_game1._ui.DrawText($"Teapot At: {objectPos}", Color.White);
+            _game1._ui.DrawText($"Teapot At: {objectPos}", Color.White);
         }
     }
 }
