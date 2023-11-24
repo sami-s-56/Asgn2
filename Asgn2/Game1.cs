@@ -27,7 +27,9 @@ namespace Asgn2
         public Vector3 camPos = new Vector3(0,0,4);
         public Matrix mWorld = Matrix.Identity;
 
-        bool bPauseUpdate = false;
+        bool bRestart = false;
+
+
 
         public Game1()
         {
@@ -79,6 +81,8 @@ namespace Asgn2
             // TODO: use this.Content to load your game content here
         }
 
+        int prevOption = 0;
+
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
@@ -86,25 +90,45 @@ namespace Asgn2
 
             DeltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
+            if(prevOption != _form1.option)
+            {
+                bRestart = true;
+            }
+
             // TODO: Add your update logic here
             if(_form1.option == 1)
             {
+                if(bRestart)
+                    teapot.Start();
+
                 teapot.Update();
             }
             else if(_form1.option == 2)
             {
+                if (bRestart)
+                    litTeapot.Start();
                 litTeapot.Update();
+                if(_form1.bResetPos)
+                {
+                    litTeapot.ResetLightPos();
+                    _form1.ResetBool();
+                }
             }
             else if (_form1.option == 3)
             {
                 for(int i = 0; i < objects.Count; i++) 
                 {
+                    if (bRestart)
+                        objects[i].Start();
                     objects[i].Update();
                 }
 
                 //Handle new Instantiations
 
             }
+
+            if(bRestart) bRestart = false;
+            prevOption = _form1.option;
 
             base.Update(gameTime);
         }

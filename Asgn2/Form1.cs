@@ -33,6 +33,11 @@ namespace Asgn2
             bResetPos = true;
         }
 
+        public void ResetBool()
+        {
+            bResetPos = false;
+        }
+
         private void SetOption()
         {
             if(rb_Op1.Checked)

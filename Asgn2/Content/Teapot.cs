@@ -28,12 +28,19 @@ namespace Asgn2.Content
             objectPos = new Vector3(0, 0, 0);
             viewPortCenter = new Vector2(_game1.GraphicsDevice.Viewport.Width / 2, _game1.GraphicsDevice.Viewport.Height / 2);
 
+            objectPos = new Vector3(0, 0, 0);
 
             MouseState currentMouseState = Mouse.GetState();
             initMousePos = new Vector3(currentMouseState.X, currentMouseState.Y, currentMouseState.ScrollWheelValue);
 
-            Mouse.SetPosition((int)viewPortCenter.X, (int)viewPortCenter.Y);
+            //Mouse.SetPosition((int)viewPortCenter.X, (int)viewPortCenter.Y);
 
+        }
+
+        public override void Start()
+        {
+            objectPos = new Vector3(0, 0, 0);
+            Mouse.SetPosition((int)viewPortCenter.X, (int)viewPortCenter.Y);
         }
 
         public override void Update()

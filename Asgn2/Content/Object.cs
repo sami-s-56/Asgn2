@@ -25,6 +25,8 @@ namespace Asgn2.Content
             _game1 = game1;
         }
 
+        public virtual void Start() { }
+
         public virtual void LoadContent(){}
 
         public virtual void Update(){}
