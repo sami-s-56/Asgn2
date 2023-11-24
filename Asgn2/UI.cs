@@ -26,7 +26,7 @@ namespace Asgn2
         public void DrawText(string _text, Color color)
         {
             _spriteBatch.Begin();
-            _spriteBatch.DrawString(_font, _text, new Vector2(50, 50), color);
+            _spriteBatch.DrawString(_font, _text, new Vector2(20, 20), color);
             _spriteBatch.End();
         }
     }

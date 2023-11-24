@@ -15,8 +15,8 @@ float3 lightPos;
 float3 lightDirection = float3(1,1,1);
 float3 lightColor = float3(1, 1, 1);
 
-float specPower;
-float3 specColor;
+float specPower = 4;
+float3 specColor = float3(0, 0, 1);
 
 float3 camPos;
 matrix world;
@@ -45,7 +45,9 @@ VertexShaderOutput MainVS(in VertexShaderInput input)
 	
 	output.Position = mul(input.Position, WorldViewProjection);
     output.TexCoord = input.TexCoord;
-    output.Normal = normalize(mul(input.Normal, world));
+	//output.Normal = normalize(input.Normal);
+    
+	output.Normal = normalize(mul(input.Normal, world));
     output.ViewDir = normalize(worldP - camPos);
 	
 	return output;

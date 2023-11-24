@@ -28,6 +28,7 @@ namespace Asgn2
         public Matrix mWorld = Matrix.Identity;
 
         bool bRestart = false;
+        int noOfBoxes = 0;
 
 
 
@@ -55,13 +56,6 @@ namespace Asgn2
             litTeapot = new LitTeapot(this);
             sphere = new Sphere(this);
             objects.Add(sphere);
-
-            for(int i = 0; i < 4; i++) 
-            {
-                Box b = new Box(this, sphere);
-                b.LoadContent();
-                objects.Add(b);
-            }
 
             base.Initialize();
         }
@@ -92,6 +86,7 @@ namespace Asgn2
 
             if(prevOption != _form1.option)
             {
+                noOfBoxes = 0;
                 bRestart = true;
             }
 
@@ -116,15 +111,25 @@ namespace Asgn2
             }
             else if (_form1.option == 3)
             {
-                for(int i = 0; i < objects.Count; i++) 
+                if (Mouse.GetState().LeftButton == ButtonState.Pressed)
+                {
+                    if (!bSpawned)
+                    {
+                        SpawnCube();
+                        bSpawned = true;
+                    }
+                }
+                if (Mouse.GetState().LeftButton == ButtonState.Released)
+                {
+                    bSpawned = false;
+                }
+                    
+                for (int i = 0; i < objects.Count; i++) 
                 {
                     if (bRestart)
                         objects[i].Start();
                     objects[i].Update();
                 }
-
-                //Handle new Instantiations
-
             }
 
             if(bRestart) bRestart = false;
@@ -133,12 +138,27 @@ namespace Asgn2
             base.Update(gameTime);
         }
 
+        bool bSpawned = false;
+
+        private void SpawnCube()
+        {
+            noOfBoxes++;
+            Box b = new Box(this, sphere);
+            b.LoadContent();
+            b.Start();
+            objects.Add(b);
+        }
+
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
-
+            
             _form1.Show();
 
+            GraphicsDevice.BlendState = BlendState.Opaque;
+            GraphicsDevice.DepthStencilState = DepthStencilState.Default;
+            GraphicsDevice.SamplerStates[0] = SamplerState.LinearWrap;
+            
             if (_form1.option == 1)
             {
                 teapot.Draw();
@@ -153,6 +173,7 @@ namespace Asgn2
                 {
                     objects[i].Draw();
                 }
+                _ui.DrawText($"Box Count: {noOfBoxes}", Color.LightGreen);
             }
             // TODO: Add your drawing code here
 
